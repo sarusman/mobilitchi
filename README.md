@@ -12,6 +12,10 @@ On this page, many options are available to you such as the recurrence, the send
 
 ![Capture d’écran 2021-12-19 à 02 24 00](https://user-images.githubusercontent.com/60844500/146660397-62379a9e-20e8-468a-b847-06b3788b00c5.png)
 
+## Mail template
+
+![Capture d’écran 2021-12-19 à 02 45 14](https://user-images.githubusercontent.com/60844500/146660694-23c95114-f727-450c-8a08-1792edd44f1d.png)
+
 ## Test system
 
 ![Capture d’écran 2021-12-19 à 02 24 56](https://user-images.githubusercontent.com/60844500/146660417-42c53229-8404-4fd0-aa63-4e27021b70f5.png)
