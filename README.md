@@ -25,7 +25,7 @@ On this page, many options are available to you such as the recurrence, the send
 
 ![Capture d’écran 2021-12-19 à 02 25 42](https://user-images.githubusercontent.com/60844500/146660442-09745eaa-fbb5-4b66-9853-62971f83fa53.png)
 
-## Option on dashboard (not everthing)
+## Options on dashboard (not everthing)
 
 ![Capture d’écran 2021-12-19 à 02 25 50](https://user-images.githubusercontent.com/60844500/146660454-a8294d55-df13-41c4-b904-fcb832c1effb.png)
 
