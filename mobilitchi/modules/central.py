@@ -23,7 +23,7 @@ class mail:
     def __init__(self):
         self.server = smtplib.SMTP('smtp.gmail.com:587')
         self.server.starttls()
-        self.server.login('mobilitchi@gmail.com', 'sarusman1971')
+        self.server.login('mobilitchi@gmail.com', '*')
 
     def send_mail(self, mail,subject, message, bodyContent):
         message = MIMEMultipart()
