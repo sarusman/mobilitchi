@@ -1,0 +1,91 @@
+<style>
+  hr {
+  border:none;
+  color: white;
+  border-top:1px solid;/* or bottom */
+  margin:1em auto; 
+  width:17em;
+  }
+.styled {
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20px;
+  font-size: 1rem;
+  text-align: center;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 10px;
+  background-color: white;
+  background-image: linear-gradient(to top left,)
+  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+              inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+.styled:hover {
+    background-color: grey;
+}
+.styled:active {
+  box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+              inset 2px 2px 3px rgba(0, 0, 0, 0);
+
+}
+.square {
+    float:left;
+    position: relative;
+    width: 50%;
+    padding-bottom: 30%; /* = width for a 1:1 aspect ratio */
+    margin:1.66%;
+    overflow:hidden;
+}
+
+.content {
+    position:absolute;
+    height:80%; /* = 100% - 2*10% padding */
+    width:90%; /* = 100% - 2*5% padding */
+    padding: 10% 5%;
+}
+
+
+
+		/* Style inputs with type="text", select elements and textareas */
+	input[type=text], select, textarea {
+	  width: 20%; /* Full width */
+	  padding: 12px; /* Some padding */  
+	  border: 1px solid #ccc; /* Gray border */
+	  border-radius: 4px; /* Rounded borders */
+	  box-sizing: border-box; /* Make sure that padding and width stays in place */
+	  margin-top: 6px; /* Add a top margin */
+	  margin-bottom: 16px; /* Bottom margin */
+	  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+	}
+  input[type=password], select, textarea {
+    width: 20%; /* Full width */
+    padding: 12px; /* Some padding */  
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+	/* Style the submit button with a specific background color etc */
+	input[type=submit] {
+	  width: 20%; /* Full width */
+	  background-color: #71c55d;
+	  color: white;
+	  padding: 12px 20px;
+	  border: none;
+	  border-radius: 4px;
+	  cursor: pointer;
+	}
+
+	/* When moving the mouse over the submit button, add a darker green color */
+	input[type=submit]:hover {
+	  background-color: #505050;
+	}
+  input[type=checkbox]:hover {
+    background-color: #505050;
+  }
+	/* Add a background color and some padding around the form */
+
+}
+</style>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css')}}">
+  <link rel="icon" href="{{ url_for('static', filename='img/favicon.png')}}">
+  <link rel="apple-touch-ico" href="{{ url_for('static', filename='img/apple-touch-icon.png')}}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i')}}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='lib/bootstrap/css/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='lib/font-awesome/css/font-awesome.min.css')}}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='dist/css/adminlte.min.css')}}">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+  <script type="text/javascript" src="{{ url_for('static', filename='jspart.js')}}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css')}}" type="text/css" />
+
+  <title>MOBILIT'CHI | {{user}}</title>
+</head>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+<style>
+</style>
+  <!-- Bootstrap css -->
+  <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+  <link rel="icon" href="{{ url_for('static', filename='img/favicon.png')}}">
+  <link rel="apple-touch-icon" href="{{ url_for('static', filename='img/apple-touch-icon.png')}}">
+
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/dash.css')}}">
+
+
+<br><br>
+    <!-- Header -->
+      <header id="header" class="alt" style="background-color: black; top: 0px; position: fixed;">
+        <div class="logo"><a href="/"><img src="https://zupimages.net/up/20/29/wg55.png"></a></div>
+        <a href="#menu" >Menu</a>
+      </header>
+
+      <nav id="menu">
+        <ul class="links">
+          <li><a href="{{ url_for('home') }}" style="font-size:14px" class="nav-links">Accueil</a></li>
+          <li><a  href="{{ url_for('co') }}"  style=" font-size:14px; color:#50c690;" class="nav-links">Tableau de bord</a></li>
+          <li><a  href="{{ url_for('activite') }}"  style=" font-size:14px" class="nav-links">Votre activité</a></li>
+          <li><a  href="{{ url_for('metode') }}" style=" font-size:14px" class="nav-links">Paramètre</a></li>
+          <li><a  href="{{ url_for('logout') }}" style="font-size:14px" class="nav-links">Se deconnecter</a></li>
+        </ul>
+      </nav>
+
+        <div class="inner"></div>
+<tr width="300px">
+<td style="background:#50c690; width:100%;height:50px;"></td><td style="background:#FE6; width:50px;height:25px;"></td>
+</tr>
+</table>
+</ul></nav></span>
+<br>
+		    <div class="kj" >
+
+				        <center><ol><strong id='pb_heure' style="color:#DC143C;">{{erreur}}</strong></ol></center></div>
+		    <div class="kj" style="background-color: rgba(50,205,50, 0.2)">
+
+				        <center><ol><strong id='' style="color:green;">{{succes}}</strong></ol></center>
+    </div></ul></nav></span>
+		<div class="containers">
+			<div class="square">
+			    <div class="content">
+			     <strong><h2>Ajouter un horaire</h2></strong>
+				    <div class="kl" >
+<hr class="ck"></div>
+<form  onsubmit= " return new_horaire()" action="{{ url_for('add_data') }}"method="POST">
+					<head>
+						<a>Type de votre transport </a>
+				      <select id="type" name="type">
+				        <option value="bus">Bus</option>
+				        <option value="metro">Métro</option>
+				        <option value="rer">RER</option>
+				        <option value="noctilien">Noctilien</option>
+				        <option value="tramway">Tramway</option>
+				    </select>
+				</br>
+					<a>Nom / numéro de votre transport </a>
+				</br>
+						<input type="text" id="nom_transport" name="nom_transport" placeholder='exemple : 8' maxlength="30"required></input>
+				</br>
+					<a>Nom de votre station</a>
+				</br>
+				 <input type="text" id="station" name="station" placeholder='exemple : Champs-Élysée'  maxlength="30"required></input></br>
+					<a>Heure de passage et d'envoi </a>
+  					<input type="text" id="heure" name="heure" placeholder='exemple : 12 : 18' maxlength="7" required />
+
+		<div class='fe'></div>
+		<h3>Choissisez vos jours :</h3>
+			  <div class="inputGroupe">
+			    <input class='m'id="Monday" name="Monday" type="checkbox"/>
+			    <label for="Monday">Lundi</label>
+			  </div>
+			  <div class="inputGroupe">
+			    <input class='m'id="Tuesday" name="Tuesday" type="checkbox"/>
+			    <label for="Tuesday">Mardi</label>
+			  </div>
+			  <div class="inputGroupe">
+			    <input class='m'id="Wednesday" name="Wednesday" type="checkbox"/>
+			    <label for="Wednesday">Mercredi</label>
+			  </div>
+			  <div class="inputGroupe">
+			    <input class='m'id="Thursday" name="Thursday" type="checkbox"/>
+			    <label for="Thursday">Jeudi</label>
+			  </div>
+			  <div class="inputGroupe">
+			    <input class='m'id="Friday" name="Friday" type="checkbox"/>
+			    <label for="Friday">Vendredi</label>
+			  </div>
+			  <div class="inputGroupe">
+			    <input class='m'id="Saturday" name="Saturday"type="checkbox"/>
+			    <label for="Saturday">Samedi</label>
+			  </div>
+			  <div class="inputGroupe">
+			    <input class='m'id="Sunday" name="Sunday" type="checkbox"/>
+			    <label for="Sunday">Dimanche</label>
+			  </div>
+			<div style="max-width: 600px; margin: 24px auto;">
+
+			<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet"></div></head>
+
+		<div ><h3>Par SmS, Mail ou les deux ? </h3>
+			  <div class="inputGroupe">
+			{%if nbr%}
+			    <input class='m'id="sms" name="sms" type="checkbox"/>
+			    <label for="sms">SMS</label>
+			 {%endif%}
+			{%if not nbr%}
+			    <input class='m'id="sms" name="sms" type=""/>
+			    <label for="sms" >(Ajouter votre numéro)</label>
+			 {%endif%}
+			  <div class="inputGroupe">
+			  <div class="inputGroupe" >
+			    <input  class='m'id="mail" name="mail" type="checkbox"/>
+			    <label for="mail">Mail</label>
+			  <div class="inputGroupe">
+				<input  type="submit" value="Ajouter"onclick='new_horaire()'></div></div>
+</form></div></div></div></div>
+</form>
+<br><br>
+<script type="text/javascript">
+var phoneField = document.getElementById('heure');
+phoneField.addEventListener('keyup', function(){
+  var phoneValue = phoneField.value;
+  var output;
+  phoneValue = phoneValue.replace(/[^0-9]/g, '');
+    var area = phoneValue.substr(0, 2);
+    var tel = phoneValue.substr(2, 4);
+     if (area.length == 2 && tel.length == 2 && parseInt(area)<=23 && parseInt(tel)<60) {
+        output =  area  + " : " + tel;
+    } else if (area.length == 2 && tel.length < 2 && parseInt(area)<=23) {
+        output =  area  + " : " + tel;
+    } else if ( parseInt(tel)>60) {
+      output=area;
+    } else if (area.length==1) {
+      output=area;
+    } else {
+      output='';
+    }
+  phoneField.value = output;
+  
+});
+</script>
+	<strong><h2>Rechercher une station</h2></strong>
+	<div class="ck" ></div>
+	<ol><strong id='pb_heure' style="color:#DC143C;"></strong></ol>
+	<form action="{{ url_for('station_') }}" method="POST">
+			<a>Choisir le type de transport </a>
+		  		<br>
+				  <select id="type" name="type">
+				    <option value="buses">Bus</option>
+				    <option value="metros">Métro</option>
+				    <option value="rers">RER</option>
+				    <option value="noctiliens">Noctilien</option>
+				    <option value="tramways">Tramway</option>
+				</select>
+				<br>
+			<a>Nom / numéro de votre transport </a>
+		    <input type="text" placeholder="exemple : 8" id="code" name="code" required>
+			<br>
+		  	<input  type="submit" value="Rechercher">
+</form>
+
+		<div class="dropdown">
+		<input type='button'onclick="myFunction()" class="dropbtn" value="Voir les stations de la ligne  {{meta}} ( bas de page )"></input><br><br>
+		<center><p>Les données envoyés proviennent directement et en temps réel de la <strong><a href="https://www.ratp.fr"  target="_blank"> RATP</a></strong> ! <br> Consulter notre  <a href="{{ url_for('home') }}"> page d'accueil </a> pour d'information.</center>
+		<div id="myDropdown" class="dropdown-content">
+		<br>
+			<center><h4><strong>Station desservi par la ligne {{meta}}</strong></h4></center>
+			{%for i in range(0, leni) %} 
+			<br>
+		       <strong id='station' style="color:#909090;">- {{station[i]}}</strong>
+			{%endfor%}
+			<br><br></div></p></center></div>
+			</div></head></div></div></a></h1></div></div></div></form></div>
+
+	<div class="squares">
+	    <div class="contents">
+	  <div >
+	  	</div></div>
+
+	    <section class="content">
+	    <center><h1>Horaire choisis</h1></center>
+	   <hr>
+	</br>
+	      <div class="container-fluid">
+	        <!-- Small(Stat box)-88-->
+	        <div class="row">
+
+	{%for i in range(len)%} 
+		{%for g in data.data[i].values()%}
+	          <div class="col-lg-3 col-6">
+	            <div class="small-box bg-success">
+	              <div class="inner">
+	                <h3>{{g.types}}<br>{{g.nom}}<br><sup style="font-size: 20px"></sup></h3>
+	                <a> Heure: {{g.heure}} <br> Arrêt: {{g.station}}</a><br>
+	                	<a>Jours : </a><br>
+	                	{%for d in g.jours%}
+	                		&nbsp;&nbsp; {{get_day[d]}}<br>
+	                	{%endfor%}
+	                </a><br>
+	                	<a>Platformes : </a><br>
+	                	{%for d in g.platform%}
+	                		&nbsp;&nbsp; {{d}}<br>
+	                	{%endfor%}
+	                </div>
+	              <div class="icon">
+	                <i class="ion ion-stats-bars"></i>
+	              </div></form>
+	              <form action="/supp/{{i//6}}/" method="post">
+	              		<center><input class="btn btn-success btn-sm dropdown-toggle" type='submit'  style='color:white;' id="del" name="del" value='Supprimer'></input></center>
+	              </form>
+	            </div>
+	          </div>
+	{%endfor%}
+
+	{%endfor%}
+	</div>
+		<center>
+			<div class="btn-group">
+	                    <button type="button" class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown" data-offset="-52"> Ajouter un horaire !</button>
+	                </div></center>
+	        </div></div></div>
+
+		</header>
+	</form>
+  <script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.min.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='jassets/js/jquery.scrolly.min.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.scrollex.min.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='assets/js/skel.min.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='assets/js/util.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='assets/js/main.js')}}"></script>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css')}}">
+  <link rel="icon" href="{{ url_for('static', filename='img/favicon.png')}}">
+  <link rel="apple-touch-icon" href="{{ url_for('static', filename='img/apple-touch-icon.png')}}">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='lib/font-awesome/css/font-awesome.min.css')}}">
+  <script type="text/javascript" src="{{ url_for('static', filename='jspart.js')}}"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+  <script type="text/javascript" src="{{ url_for('static', filename='../js/prism.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='../../build/js/intlTelInput.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/multipleInstances.js.ejs')}}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='build/css/intlTelInput.css')}}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='build/css/demo.css?')}}">
+  <script type="text/javascript" src="{{ url_for('static', filename='jspart.js')}}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css')}}" type="text/css" />
+  
+
+  <title>MOBILIT'CHI | {%block title%}{%endblock%}</title>
+</head>
+
+<body>
+  
+  <!-- Header -->
+      <header id="header" class="alt" style="background-color: black; top: 0px">
+        <div class="logo"><a href="/"><img src="https://zupimages.net/up/20/29/wg55.png"></a></div>
+        <a href="#menu" >Menu</a>
+      </header>
+
+    <!-- Nav -->
+      <nav id="menu">
+        <ul class="links">
+          {%if session.get('user')==None%}
+          <li><a href="{{ url_for('home') }}" style="font-size:14px; " class="nav-links">Accueil</a></li>
+          <li><a  href="{{ url_for('co') }}"style="font-size:14px;" class="nav-links">Connexion</a></li>
+          <li><a  href="{{ url_for('inscription') }}" style="font-size:14px; color:#50c690;"class="nav-links">S'inscrire</a></li>
+          {%endif%}
+
+          {%if session.get('user')%}
+
+          <li><a href="{{ url_for('home') }}" style="font-size:14px" class="nav-links">Accueil</a></li>
+          <li><a  href="{{ url_for('co') }}"  style=" font-size:14px" class="nav-links">Tableau de bord</a></li>
+          <li><a  href="{{ url_for('metode') }}" style=" font-size:14px" class="nav-links">Paramètre</a></li>
+          <li><a  href="{{ url_for('logout') }}" style="font-size:14px" class="nav-links">Se deconnecter</a></li>
+          {%endif%}
+
+      </nav>
+
+
+      {%block content%}{%endblock%}
+
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-12 col-lg-4">
+          <div class="footer-logo">
+
+            <a class="navbar-brand" href="/">MOBILIT'chi</a>
+            <p>“Facilitons notre vie !” </p>
+          </div>
+
+        </div>
+
+
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <div class="list-menu">
+
+            <h4>À propos</h4>
+            <ul class="list-unstyled">
+              <li><a href='/condition' style="font-size: 15px">Conditions du site</a></li><br>
+              <li><a href='/contact' style="font-size: 15px">Nous contacter</a></li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyrights">
+      <div class="container">
+        <p>&copy; Copyrights MOBILIT'chi. Tout les droits réservé</p>
+        </div>
+  </footer>
+  <script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.min.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.scrollex.min.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='assets/js/skel.min.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='assets/js/util.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='assets/js/main.js')}}"></script>
+
+</html>

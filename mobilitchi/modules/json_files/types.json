@@ -1,0 +1,7 @@
+{
+	"buses":"bus",
+	"metros":"metro",
+	"tramways":"tramway",
+	"noctiliens":"noctilien",
+	"rers": "rer"
+}

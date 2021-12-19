@@ -1,0 +1,131 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css')}}">
+  <link rel="icon" href="{{ url_for('static', filename='img/favicon.png')}}">
+  <link rel="apple-touch-icon" href="{{ url_for('static', filename='img/apple-touch-icon.png')}}">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+
+  <!-- Bootstrap css -->
+  <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css')}}" type="text/css" />
+
+  <!-- Libraries CSS Files -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='lib/owlcarousel/assets/owl.carousel.min.css')}}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='lib/owlcarousel/assets/owl.theme.default.min.css')}}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='lib/font-awesome/css/font-awesome.min.css')}}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='lib/animate/animate.min.css')}}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='lib/modal-video/css/modal-video.min.css')}}">
+  <script type="text/javascript" src="{{ url_for('static', filename='jspart.js')}}"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+  <!-- Main Stylesheet File -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+
+
+
+  <title>MOBILIT'CHI | Mot de passe</title>
+</head>
+
+<style>
+  hr {
+  border:none;
+  color: white;
+  border-top:1px solid;/* or bottom */
+  margin:1em auto; 
+  width:17em;
+  }
+.styled {
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20px;
+  font-size: 1rem;
+  text-align: center;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 10px;
+  background-color: white;
+  background-image: linear-gradient(to top left,)
+  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+              inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+.styled:hover {
+    background-color: grey;
+}
+.styled:active {
+  box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+              inset 2px 2px 3px rgba(0, 0, 0, 0);
+
+}
+.kj {
+  background-color: rgba(50,205,50, 0.2);
+   border-radius: 7px; /* Rounded borders */
+
+}
+.kl {
+  background-color: rgba(240, 52, 52, 0.1);
+   border-radius: 7px; /* Rounded borders */
+
+}
+</style>
+
+<body>
+    <!-- Header -->
+      <header id="header" class="alt" style="background-color: black; top: 0px">
+        <div class="logo"><a href="/"><img src="https://zupimages.net/up/20/29/wg55.png"></a></div>
+        <a href="#menu" >Menu</a>
+      </header>
+
+    <!-- Nav -->
+      <nav id="menu">
+        <ul class="links">
+          <li><a href="{{ url_for('home') }}" style="font-size:14px; " class="nav-links">Accueil</a></li>
+          <li><a  href="{{ url_for('co') }}"style="font-size:14px; color:#50c690;" class="nav-links">Connexion</a></li>
+          <li><a  href="{{ url_for('inscription') }}" style="font-size:14px;"class="nav-links">S'inscrire</a></li>
+
+      </nav>
+
+        <div class="inner">
+</table>
+  <br>
+  <br>
+  <br>
+<div class="container" >
+	<div class="kj">
+</div>
+  <form action="/password.ups/{{mail}}/{{user_id}}/" method="POST">
+     <strong><h1>Changer votre mot de passe</h1></strong>
+    <div class="kl" >
+         <ol><strong id='d' style="color:#DC143C;">{{error}}</strong></ol>
+       </div>
+      <br>
+      <label for="validN" style="font-size: 17px">Entrer le code de validation envoyer aux coordonnées suivantes : <strong>{{mail}}</strong></label>
+      <br>
+      <input type="password" id="validN" name="password" placeholder="Nouveau mot de passe" style="width: 100%">
+      <br>
+    <br>
+      <input type="password" id="validN" name="password_confi" placeholder="Confirmer votre mot de passe"style="width: 100%" >
+    <br>
+    <input type="submit" value="Changer"style="width: 100%">
+    <br>
+
+    <br>
+
+  <script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.min.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='jassets/js/jquery.scrolly.min.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.scrollex.min.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='assets/js/skel.min.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='assets/js/util.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='assets/js/main.js')}}"></script>
+</div>
+</div></div></div></div></ul></nav></span></a></h1></div></div>
+
+<!--action="{{ url_for('dmd_in') }}"-->

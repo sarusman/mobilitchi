@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css')}}">
+  <link rel="icon" href="{{ url_for('static', filename='img/favicon.png')}}">
+  <link rel="apple-touch-icon" href="{{ url_for('static', filename='img/apple-touch-icon.png')}}">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='lib/font-awesome/css/font-awesome.min.css')}}">
+  <script type="text/javascript" src="{{ url_for('static', filename='jspart.js')}}"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/dash.css')}}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='build/css/intlTelInput.css')}}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='build/css/demo.css?')}}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css')}}" type="text/css" />
+
+  <title>MOBILIT'CHI | Paramètre </title>
+</head>
+<style type="text/css">
+  .banner {
+  width: 100%;
+  height: 800px;
+  background-image: url(static/assets/img/banner-img.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+
+</style>
+<style type="text/css">
+  * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+.navbar {
+  font-size: 18px;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 10px;
+}
+
+.main-nav {
+  list-style-type: none;
+  top: 0px;
+
+  display: none;
+}
+
+.nav-links,
+.logo {
+  text-decoration: none;
+  color: black;
+}
+
+.main-nav li {
+  text-align: center;
+  margin: 15px auto;
+}
+
+.logo {
+  display: inline-block;
+  font-size: 22px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.navbar-toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  color: black;
+
+  font-size: 24px;
+}
+
+#chkToggle {
+  display: none;
+}
+
+#chkToggle:checked + ul.main-nav {
+  display: block;
+}
+
+@media screen and (min-width: 1200px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+    height: 50px;
+    align-items: center;
+  }
+
+  #chkToggle:checked + ul.main-nav {
+    display: flex;
+  }
+
+  .main-nav {
+    display: flex;
+    margin-right: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .main-nav li {
+    margin: 0;
+  }
+
+  .nav-links {
+    margin-left: 40px;
+  }
+
+  .logo {
+    margin-top: 0;
+  }
+
+  .navbar-toggle {
+    display: none;
+  }
+
+  .logo:hover,
+  .nav-links:hover {
+    color: green;
+  }
+}
+
+
+</style>
+
+
+
+    <!-- Header -->
+      <header id="header" class="alt" style="background-color: black; top: 0px; position: fixed;">
+        <div class="logo"><a href="/"><img src="https://zupimages.net/up/20/29/wg55.png"></a></div>
+        <a href="#menu" >Menu</a>
+      </header>
+
+    <!-- Nav -->
+      <nav id="menu">
+        <ul class="links">
+          <li><a href="{{ url_for('home') }}" style="font-size:14px" class="nav-links">Accueil</a></li>
+          <li><a  href="{{ url_for('co') }}"  style="font-size:14px" class="nav-links">Tableau de bord</a></li>
+          <li><a  href="{{ url_for('activite') }}"  style=" font-size:14px" class="nav-links">Votre activité</a></li>
+          <li><a  href="{{ url_for('metode') }}" style="color:#50c690; font-size:14px" class="nav-links">Paramètre</a></li>
+          <li><a  href="{{ url_for('logout') }}" style="font-size:14px" class="nav-links">Se deconnecter</a></li>
+        </ul>
+      </nav>
+</li></ul></nav>
+<style>
+  hr.cd {
+  border:none;
+  color: white;
+  border-top:1px solid;/* or bottom */
+  margin:1em auto;
+  width:auto;
+  }
+.styled {
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20px;
+  font-size: 1rem;
+  text-align: center;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 10px;
+  background-color: white;
+  background-image: linear-gradient(to top left,)
+  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+              inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+.styled:hover {
+    background-color: grey;
+}
+.styled:active {
+  box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+              inset 2px 2px 3px rgba(0, 0, 0, 0);
+
+}
+  input[type=tel] {
+    width: max(57vw, 330px);
+    padding: 12px; /* Some padding */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  input[type=email] {
+    width: max(35vw, 330px);
+    padding: 12px; /* Some padding */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+.kj {
+  background-color: rgba(50,205,50, 0.2);
+   border-radius: 7px; /* Rounded borders */
+
+}
+.kd {
+  background-color: rgba(240, 52, 52, 0.1);
+  border-radius: 7px; /* Rounded borders */
+
+}
+</style>
+<style type="text/css">
+
+
+  /* Add a background color and some padding around the form */
+
+}
+
+</style>
+
+<body>
+
+
+<style type="text/css">
+
+.header {
+  background-color: #fff;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.header li a {
+  color: black;
+  padding: 20px 20px;
+  border-right: 1px solid #f4f4f4;
+  text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  color: #50c690
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+
+
+</style>
+
+<style>
+  .background{
+ background: #71c55d;
+ height:85px;
+
+}
+</style>
+<tr width="300px">
+<td style="background:#50c690; width:100%;height:50px;"></td><td style="background:#FE6; width:50px;height:25px;"></td>
+</tr>
+</table>
+  <br><br><br>
+    <div class="kj">
+    <center><ol><strong  style="color:green;">{{sucess}}</strong></ol></center>
+</div>
+  <div class="kj" style="background-color:rgb(255, 0, 0, 0.1)">
+<center><ol><strong id='pb_heure' style="color:red;">{{erreur}}</strong></ol></center></div>
+  <br>
+  <div class="background">
+  <br>
+  <center><h2 style="color: white;">Paramètre et configuration de votre compte</h2></center>
+</div>
+  <br>
+<div class="container" >
+     <strong><h1>Vos coordonnées actuels / ID de connexion :</h1></strong>
+  <br><div class="kd">
+    <ol><strong style="color:#DC143C;" id='error' name='error'></strong></ol></div>
+
+      <br>
+      <label for="password" style="color: grey">Votre adresse mail  : <strong>{{mail}}<strong id='pbmdp' style="color:red;"></strong></label>
+      <br>
+      <label for="password"style="color: grey">Votre numéro : <strong>{{sms}}<strong id='pbmdp' style="color:red;"></strong></label>
+      <br>
+<!--
+
+      <label for="password"style="color: grey">Votre identifiant Discord  : <strong>{{discord}}<strong id='pbmdp' style="color:red;"></strong></label>
+      <br>
+      <label for="password"style="color: grey">Votre identifiant Messenger : <strong>{{messenger}}<strong id='pbmdp' style="color:red;"></strong></label>
+      <br>
+      <label for="password"style="color: grey">Votre identifiant Whats App : <strong>{{WhatsApp}}<strong id='pbmdp' style="color:red;"></strong></label>
+    <br>
+
+-->
+
+  <hr class="cd" >
+
+     <strong><h1>Ajouter de nouvelles coordonnés :</h1></strong>
+        <br><br>
+<form action="/mail.new" method="post">
+        <p style="font-size: 30px">Nouvelle adresse mail : </p>
+        <p style="font-size: 18px">Entrer une adresse mail valide. Celle ci changeras aussi votre identifiant de connexion de votre compte Mobilitchi. (Confirmation requit à partir de votre boîte mail).</p>
+        <input type="email" placeholder="exemple@example.com" id="mail_user" name="mail_user" style="width: 100%">
+        <a target="_blank"><input style="width: 100%" type="submit" value="Changer mon adresse mail"><br></a>
+</form>
+
+<br><br>
+<form action="/number.new" method="post">
+        <p style="font-size: 30px">Ajouter un nouveau numéro : </p>
+        <p style="font-size: 18px">Entrer votre numéro français commençant par +33. Les prix des SMS ne sont pas facturé sur votre forfait téléphonique.</p>
+        <input style="width: 100%" id="home"type="tel" id="new_number" name="number_user" placeholder="Numéro (+33)" maxlength="12" minlength="12"></input>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/prism.js')}}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='build/js/intlTelInput.js')}}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/multipleInstances.js.ejs')}}"></script><br>
+        <a target="_blank"><input style="width: 100%" type="submit" value="Ajouter mon numéro"><br></a>
+</form><br><br><br><br>
+<form action="/delete_user" method="post">
+    <a target="_blank"><input style="width: 100%; background-color: red;"  type="submit" value="Supprimer mon compte"><br></a>
+</form>
+
+<br> <br>
+
+</div>
+</div></div></div></div></ul></nav></span></a></h1></div></div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <!--==========================
+    Footer
+  ============================-->
+  <center><footer class="footer">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-12 col-lg-4">
+          <div class="footer-logo">
+
+            <a class="navbar-brand" href="/">MOBILIT'chi</a>
+            <p>“Facilitons notre vie !” </p>
+          </div>
+
+        </div>
+
+
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <div class="list-menu">
+
+            <h4>À propos</h4>
+
+            <ul class="list-unstyled">
+              <li><a href='/condition'>CONDITIONS D'UTILISATION</a></li>
+
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyrights">
+      <div class="container">
+        <p>&copy; Copyrights MOBILIT'chi. Tout les droits réservé</p>
+        </div>
+      </div>
+    </div>
+
+  </footer></center>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.min.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='jassets/js/jquery.scrolly.min.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.scrollex.min.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='assets/js/skel.min.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='assets/js/util.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='assets/js/main.js')}}"></script>
+</body>
+</html>
+
+
+
+
+
+<!--action="{{ url_for('dmd_in') }}"-->

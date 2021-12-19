@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{%block title%}Connexion{%endblock%}
+{%block content%}
+
+<div class="inner">
+<td style="background:#50c690; width:100%;height:50px;"></td><td style="background:#FE6; width:50px;height:25px;"></td>
+</tr>
+</table>
+  <br>
+  <br>
+  <br>
+<div class="container" >
+  <div class="kd">
+    <ol><strong style="color:#DC143C;">{{username_err}}</strong></ol></div>
+  <div class="kj">
+    <ol><strong  style="color:green;">{{inscri_sucess}}</strong></ol>
+</div>
+  <form  onsubmit= " return validation_inscri()" action="/connexion.log" method="POST">
+     <strong><h1>Connexion</h1></strong>
+      <br>
+      <label for="username">Adresse mail / Numéro<strong id='username' style="color:red;"></strong></label>
+      <br>
+      <input type="email" id="mailP" name="mailP" placeholder="exemple@example.com" style="width:100%;" required>
+      <br>
+      <label for="password">Mot de passe <strong id='pbmdp' style="color:red;"></strong></label>
+      <br>
+      <input type="password" id="pbmdp" name="password" placeholder="Entrer votre mot de passe" required style="width:100%;">
+
+    <br>
+    <a href="/password.change" style="font-size: 15px; color: green">Mot de passe oublié</a>
+    <br>
+    <input type="submit" value="Se connecter"  style="width:100%">
+    <br>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+</div></div></div></div></ul></nav></span></a></h1></div></div>
+{%endblock%}
+<!--action="{{ url_for('dmd_in') }}"-->

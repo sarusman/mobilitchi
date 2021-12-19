@@ -1,0 +1,35 @@
+{%extends "base.html"%}
+{%block title%}Validation{%endblock%}
+{%block content%}
+<div class="inner">
+<div class="container" >
+	<div class="kj">
+</div><br><br><br>
+  <form action="/validation.log/" method="POST">
+     <strong><h1>Validation</h1></strong>
+    <div class="kl" >
+         <ol><strong id='d' style="color:#DC143C;">{{error}}</strong></ol>
+       </div>
+      <label for="validN">Entrer le code de validation envoyer aux coordonnées suivantes : <strong>{{user}}</strong>
+      <br>
+      <input type="text" id="validN" name="validN" placeholder="Entrer votre code" maxlength="7" required style="width: 100%">
+      <br>
+    <br>
+    <br>
+    <input type="submit" value="Se connecter"style="width: 100%">
+    <br>
+
+    <br>
+
+  <script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.min.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='jassets/js/jquery.scrolly.min.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.scrollex.min.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='assets/js/skel.min.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='assets/js/util.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='assets/js/main.js')}}"></script>
+
+</div>
+</div></div></div></div></ul></nav></span></a></h1></div></div>
+
+
+{%endblock%}

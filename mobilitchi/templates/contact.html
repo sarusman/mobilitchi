@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<!--
+	Urban by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css')}}">
+  <link rel="icon" href="{{ url_for('static', filename='img/favicon.png')}}">
+  <link rel="apple-touch-icon" href="{{ url_for('static', filename='img/apple-touch-icon.png')}}">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='lib/font-awesome/css/font-awesome.min.css')}}">
+  <script type="text/javascript" src="{{ url_for('static', filename='jspart.js')}}"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+  <script type="text/javascript" src="{{ url_for('static', filename='../js/prism.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='../../build/js/intlTelInput.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/multipleInstances.js.ejs')}}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='build/css/intlTelInput.css')}}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='build/css/demo.css?')}}">
+  <script type="text/javascript" src="{{ url_for('static', filename='jspart.js')}}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css')}}" type="text/css" />
+
+<br><br><br>
+<html>
+	<head>
+		<title>Contact</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css')}}" type="text/css" />
+<body>
+    <!-- Header -->
+      <header id="header" class="alt" style="background-color: black; top: 0px">
+        <div class="logo"><a href="/"><img src="https://zupimages.net/up/20/29/wg55.png"></a></div>
+        <a href="#menu" >Menu</a>
+      </header>
+
+    <!-- Nav -->
+      <nav id="menu">
+        <ul class="links">
+          {%if session.get('user')==None%}
+          <li><a href="{{ url_for('home') }}" style="font-size:14px; " class="nav-links">Accueil</a></li>
+          <li><a  href="{{ url_for('co') }}"style="font-size:14px; color:#50c690;" class="nav-links">Connexion</a></li>
+          <li><a  href="{{ url_for('inscription') }}" style="font-size:14px;"class="nav-links">S'inscrire</a></li>
+          {%endif%}
+
+          {%if session.get('user')%}
+          <li><a href="{{ url_for('home') }}" style="font-size:14px" class="nav-links">Accueil</a></li>
+          <li><a  href="{{ url_for('co') }}"  style=" font-size:14px" class="nav-links">Tableau de bord</a></li>
+          <li><a  href="{{ url_for('metode') }}" style=" font-size:14px" class="nav-links">Paramètre</a></li>
+          <li><a  href="{{ url_for('logout') }}" style="font-size:14px" class="nav-links">Se deconnecter</a></li>
+          {%endif%}
+
+      </nav>
+
+<center><h1 style="font-size: 15px; background-color: green; color: white" id='msg'></h1></center>
+
+<div class="container" id="para">  
+<h1 style="font-size: 40px">Contact</h1><br>
+
+    <h3 style="color: green">Contacter nous et recevez une réponse sous 48h !</h3>
+   <input placeholder="Nom" type="text" tabindex="1" id="noms" required >
+      <input placeholder="Votre adresse mail" type="email" id='adresses' required >
+      <textarea placeholder="Votre message" tabindex="5" id="messages" required></textarea>
+ <input type="submit" style="width: 100%" value="Envoyer" onclick="contactd()">
+ 
+  
+</div></div>
+<div id="mydiv" data='{{ link }}'></div>
+
+		<!-- Scripts -->
+  <script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.min.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='jassets/js/jquery.scrolly.min.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.scrollex.min.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='assets/js/skel.min.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='assets/js/util.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='assets/js/main.js')}}"></script>
+
+
+	</body>
+</html>

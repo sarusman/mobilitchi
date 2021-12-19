@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css')}}">
+
+  <!-- Google Fonts -->
+
+  <script type="text/javascript" src="{{ url_for('static', filename='jspart.js')}}"></script>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='lib/font-awesome/css/font-awesome.min.css')}}">
+
+  <!-- Main Stylesheet File -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+  <title>MOBILIT'CHI | Accueil</title>
+</head>
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+
+  <!-- Bootstrap css -->
+  <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+  <link rel="icon" href="{{ url_for('static', filename='img/favicon.png')}}">
+  <link rel="apple-touch-icon" href="{{ url_for('static', filename='img/apple-touch-icon.png')}}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/theme.css')}}" type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/media.css')}}" type="text/css" />
+
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css')}}" type="text/css" />
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,600italic,400italic,800,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+<style type="text/css">
+  .banner {
+  width: 100%;
+  height: 800px;
+  background-image: url(static/assets/img/banner-img.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+</style>
+
+
+
+    <!-- Header -->
+      <header id="header" class="alt">
+        <div class="logo"><a href="/"><img src="https://zupimages.net/up/20/29/wg55.png"></a></div>
+        <a href="#menu">Menu</a>
+      </header>
+
+    <!-- Nav -->
+      <nav id="menu">
+        <ul class="links">
+          {%if session.get('user')==None%}
+          <li><a href="{{ url_for('home') }}" style="font-size:14px;  color:#50c690;" class="nav-links">Accueil</a></li>
+          <li><a  href="{{ url_for('co') }}"style="font-size:14px;" class="nav-links">Connexion</a></li>
+          <li><a  href="{{ url_for('inscription') }}" style="font-size:14px;"class="nav-links">S'inscrire</a></li>
+          {%endif%}
+
+          {%if session.get('user')%}
+          <li><a href="{{ url_for('home') }}" style="font-size:14px; color:#50c690;" class="nav-links">Accueil</a></li>
+          <li><a  href="{{ url_for('co') }}"  style=" font-size:14px" class="nav-links">Tableau de bord</a></li>
+          <li><a  href="{{ url_for('activite') }}"  style=" font-size:14px" class="nav-links">Votre activité</a></li>
+          <li><a  href="{{ url_for('metode') }}" style=" font-size:14px" class="nav-links">Paramètre</a></li>
+          <li><a  href="{{ url_for('inscription') }}" style="font-size:14px;"class="nav-links">Créer un nouveau compte</a></li>
+          <li><a  href="{{ url_for('logout') }}" style="font-size:14px" class="nav-links">Se deconnecter</a></li>
+          {%endif%}
+
+      </nav>
+    <!-- Banner -->
+      <section id="banner">
+        <div class="inner">
+            <h2 id="ert" style=" font-size: 7vw; color: white;">MOBILIT'chi</h2>
+            <p>Gagner du temps <br/> en prenant vos transports à l'heure.</p>
+          <div  align="center"><a class="example_b" href="{{ url_for('inscription') }}"rel="nofollow noopener">S'inscrire</a>
+          <a  align="center"><a class="example_b" href="{{ url_for('co') }}"  rel="nofollow noopener">Se connecter</a>
+        </div><br>
+<center><p style="color: white; font-size: 20px;">Notre objectif : vous aidez au quotidien en vous envoyant les horaires de vos transport prédéfinis, ou non.</p></center>
+
+<style type="text/css">
+  @media screen and (max-width: 600px) {
+  h2.ert {
+    font-size: 10px;
+  }
+}
+</style>
+      </section>
+</div></div></div></div></ul></nav></span></a></h1></div></div>
+
+            <div class="clear"></div>
+        </div>
+        <!-- // End Banner Section // -->
+         <div class="bgcolor"></div>
+        <!-- \\ Begin Container \\ -->
+        <div id="Container">
+    <div class="marquee" style="font-size: 23px;">{{message}}</div>
+            <div class="About_sec" id="about">
+                <div class="Center">
+                    <h2>une solution pour les usagers ratp</h2>
+            <br> <br> <br>
+  <hr class="cd"></div></div></div>
+      <div id="main">
+        <!-- Section -->
+          <section class="wrapper style1">
+            <div class="inner">
+              <!-- 2 Columns -->
+                <div class="flex flex-2">
+                <div class="col" style="min-width: 350px">
+                    <div class="image round fit">
+                      <a class="link"><img src="https://zupimages.net/up/20/29/lt9w.png" alt="" style="max-width: 500px; width: 100%;height: auto"/></a>
+                    </div>
+                  </div>
+                  <div class="col col2">
+                    <h3>Obtenez gratuitements vos horaires de passages des transports RATP !</h3>
+                    <p style=" font-size: 18px">Chaque jours, une personne utilisant les transports en communs perd entre <strong>7 à 10 minutes par jours et 40 minutes à 1 heure par mois </strong>à chercher son horaire de passage d'un transport ... Cela est difficile à croire même pour les adeptes de l'efficacité. Désormais Mobilitchi prend le relais en vous envoyant gratuitement une alerte de passage (par message, mail...) des horaires que avez prédéfinis, même en cas d'imprévu.<p style=" font-size: 18px ; background-color: green; color: white; border-radius: 5px"> En ajoutant Mobilitchi à votre quotidien, vous vous initiez à gagner du temps et vous débarrassez d'une des tâches les plus répétitifs dans une journée. </p></p><br><br>
+                  </div>
+                </div>
+            </div>
+          </section>
+
+
+    <center>
+      <h3 style="background-color: orange">Essayer tout de suite Mobilitchi !</h3><br>
+      <h4 >Comment faire ?</h4><br>
+      <p style=" font-size: 18px">Entrer votre adresse mail pour savoir quand passe le <a href="https://www.ratp.fr/plans-lignes/metro/8" target="_blank"><strong style="color: green" > métro 8 à l'arrêt Balard</strong></a>. On vous garantit que l'heure obtenue est similaire à celui de la RATP !</p>
+      <div class="info">
+        <input type="email" placeholder="Adresse mail" id='mail_tv'>
+      </div>
+      <input type="submit" value="Envoyer"onclick="fre()">
+      <br>
+      <strong><p style=" font-size: 20px; color: green" id='text'></p></strong>
+    </center>
+
+
+<style type="text/css">
+  
+.info{
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.info input {
+  display: block;
+  width: 300px;
+  height: 20px;
+  border: 0;
+  border-radius: 3px;
+  margin: 0 0 10px 0;
+  padding: 12px 10px;
+  background: #fff;
+}
+
+.info input:last-child {
+  margin: 0;
+}
+
+.info input:focus {
+  background: #eee;
+  outline: none;
+}
+input[type="email"]{
+  height: 30px;
+}
+input[type="submit"]{
+  vertical-align: top;
+  height: 35px;
+  width: 98px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 3px;
+  background: pink;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+  background: linear-gradient(45deg, #FF6C54, #FFA754);
+}
+
+input[type="submit"]:hover{
+  background: linear-gradient(180deg, #FF6C54, #FFA754);
+}
+</style>
+        <div id="Container">
+            <!-- \\ Begin About Section \\ -->
+            <div class="About_sec" id="about">
+                <div class="Center">
+                            <div class="Description"><br><br>
+                                <h3 style="font-size: 50px; color: green">Qui sommes nous ?</span></h3>
+                                <p style="font-size: 20px"> Des fléaux de la vie quotidienne ayant pour seul but d'apporté de la valeur aux utilisateurs et aider les personnes à gagner du temps grâce à nos compétences.</p>
+                            </div>
+                        </div>
+                    <!-- // End Tab Side // -->
+                </div>
+            </div><br>
+
+          <section class="wrapper style2">
+            <div class="inner">
+              <div class="flex flex-2">
+                <div class="col col2">
+                  <h3>Une plateforme simple d'usage et GRATUITE !</h3>
+                  <p style="color: white; font-size: 17px">Ajouter une alerte de passage ? Rien de plus simple, sur votre tableau de bord, vous entrez le nom et la station du transport souhaité, ainsi que l'heure de passage voulu. Il vous suffiras juste de sélectionné les méthode d'envoie : (sms, mail)!. Vous recevrez votre alerte, chaque jours choisis, à l'heure souhaité !</p>
+                  <p style="color: white; font-size: 17px"> Un imprévu! Demander à votre bot personel par SMS l'heure de passage de votre transort. La réponse est quasi instantané !</p>
+                </div>
+                <div class="col" style="min-width: 350px">
+                    <a href="generic.html" class="link"><img style="max-width: 500px; width: 80%;height: auto"src="https://zupimages.net/up/20/29/beug.png" alt="" /></a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+<style type="text/css">
+  * {
+  box-sizing: border-box;
+}
+main {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+  width: 100%; 
+  display: grid;
+  /* Define Auto Row size */
+  grid-auto-rows: 100px; 
+  /*Define our columns */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+  grid-gap: 1em;
+}
+
+article {
+  border-radius: 10px;
+  padding: 20px;
+  color: #fff;
+}
+
+article:nth-child(odd) {
+  background-color: #55BBE9;
+}
+
+article:nth-child(even) {
+  background-color: #afbe29;
+}
+.marquee {
+  display: inline-block;
+  white-space: nowrap;
+/*   animation: scrollLeft 38s linear infinite; */
+  padding-left: 101%;
+}
+
+.marquee:hover {
+   animation-play-state: paused
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%)
+  }
+}
+</style>
+<script type="text/javascript">
+  var marquee = document.querySelector('.marquee');
+
+var marqueeLength = marquee.clientWidth;
+
+var marqueeTravelTime = Math.ceil( marqueeLength / 100 );
+
+marquee.style.animation = `scrollLeft ${marqueeTravelTime}s linear infinite`;
+
+marquee.addEventListener('mouseover', (e)=>{
+  marquee.style['animation-play-state'] = 'paused';
+})
+
+marquee.addEventListener('mouseout', (e)=>{
+  marquee.style['animation-play-state'] = 'running';
+})
+</script>
+            <div class="clear"></div>
+        </div>
+        <!-- // End Banner Section // -->
+         <div class="bgcolor"></div>
+        <!-- \\ Begin Container \\ -->
+        <div id="Container">
+            <div class="About_sec" id="about">
+                <div class="Center">
+                    <h2>Recevez les alertes par : </h2>
+              <section id="about-us" class="about-us padd-section wow fadeInUp">
+  <hr class="cd">
+
+  <center><main>
+    
+  <article>
+      <h3>SMS</h3></strong>
+
+  </article>
+  <article>
+      <h3>Mail</h3></strong>
+
+  </article>
+</main></center>
+
+
+
+
+        <div id="Container">
+            <!-- \\ Begin About Section \\ -->
+            <div class="About_sec" id="about">
+                <div class="Center">
+                            <div class="Description"><br><br>
+                                <h3 style="font-size: 50px; background-color: green; color: white; border-radius: 5px">Un service illimité !</span></h3>
+                                <strong><p style="font-size: 20px; "> Ajoutez autant d'alerte souhaité, vous les recevrez tous !</p></strong>
+                            </div>
+                        </div>
+                    <!-- // End Tab Side // -->
+                </div>
+            </div><br>
+  <section id="about-us" class="about-us padd-section wow fadeInUp">
+    <div class="container">
+      <div class="row justify-content-center">
+
+        <div class="col-md-5 col-lg-3">
+          <img src="static/img/ratp.png" >
+        </div>
+
+        <div class="col-md-7 col-lg-5">
+          <div class="about-content">
+
+            <h2><span>Des données à valeurs sûres</span> </h2>
+            <p style="font-size: 20px">Les données envoyés proviennent directement et en temps réel de la <strong><a href="https://www.ratp.fr"  target="_blank"> RATP.</a></strong> 
+            </p>
+            <ul class="list-unstyled">
+            </ul>
+
+          </div></div></div></div></section></div></section>
+          <section class="wrapper style2">
+            <div class="inner">
+              <div class="flex flex-2">
+                <div class="col col2">
+                  <h3>Pourquoi notre plateforme et pas une autre ?</h3>
+                  <p style="color: white; font-size: 17px">Mobilitchi se base sur des données en temps réel mit à jour par la RATP. Nous vous garantissons dans tout les cas l'envoi de votre alerte de passage.  Grâce à l'envoie par SMS, vous recevrez votre alerte même en cas de coupure de connexion internet sur votre appareil. Notre service et gratuit à 200%. Votre forfait mobile et le reste, sont à l'abris !</p>
+                  <h3>Une sécurité absolu</h3>
+                  <p style="color: white; font-size: 17px">Les données que vous enregistrez sur ce site, sont entièrement chiffrées par les protocoles réseaux les plus récents.<br>
+                  </p>
+                  <a href="/inscription" class="button">Je m'inscrit</a>
+                </div>
+                <div class="col" style="min-width: 400px">
+                  <div class="image round fit">
+                    <a class="link"><img  src="https://zupimages.net/up/20/29/0ldn.jpg" alt="" style="max-width: 500px; width: 80%;height: auto"/></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+<div style="background-color: black">
+           <div class="bgcolor"></div>
+          <!-- \\ Begin Container \\ -->
+          <div id="Container">
+              <!-- \\ Begin About Section \\ -->
+
+              <div class="About_sec" id="about">
+                  <div class="Center" >
+                      <h2 style="color: white">Comment sa marche ?</h2>
+              <br> <br> 
+  </div></div>
+
+  <center><div id="container" >
+                  <h1 style="color: white">Reçevoir vos horaires : </h1><br>
+                  <img src="https://zupimages.net/up/20/31/s2py.png">
+                  <p style="color: white; font-size: 17px">Grâce à Mobilitchi, vous pouvez reçevoir par les plateformes choisis les horaires de passages des transports que vous avez prédéfinis sur votre calendrier !</p><br><br><br><br>
+                  <h1 style="color: white">Demander un horaire : </h1><br>
+                  <img src="https://zupimages.net/up/20/31/sz5e.png">
+                  <p style="color: white; font-size: 17px">Un imprévu ? Demander par un simple sms ou autres, l'horaire de passage de n'importe quel transport RATP, à n'importe quel moment !</p>
+
+  </div></center></div>
+
+<br><br><br><br>
+
+
+<style type="text/css">
+
+.main-head {
+  background: #0D1440;
+  box-shadow: 0px 1px 10px -6px rgba(0, 0, 0, .15);
+  padding: 1rem;
+  margin-bottom: 0;
+  margin-top: 5rem;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.pricing-table {
+  background: rgba(137, 142, 143, 0.1); ;
+  box-shadow: 0px 1px 10px -6px rgba(0, 0, 0, .15);
+  padding: 2rem;
+  border-radius: 4px;
+  transition: .3s;
+}
+
+.pricing-table:hover {
+  box-shadow: 0px 1px 10px -4px rgba(0, 0, 0, .15);
+}
+
+.pricing-table .pricing-label {
+  border-radius: 2px;
+  padding: .25rem .5rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.pricing-table h2 {
+  color: #3b3b3b;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.pricing-table h5 {
+  color: #B3B3B3;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.pricing-table .pricing-features {
+  margin-top: 2rem;
+}
+
+.pricing-table .pricing-features .feature {
+  font-size: 14px;
+  margin: .5rem 0;
+  color: #B3B3B3;
+}
+
+.pricing-table .pricing-features .feature span {
+  display: inline-block;
+  float: right;
+  color: #3b3b3b;
+  font-weight: 500;
+}
+
+.pricing-table  .price-tag {
+  margin-top: 2rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.pricing-table .price-tag .symbol {
+  font-size: 24px;
+}
+
+.pricing-table .price-tag .amount {
+  letter-spacing: -2px;
+  font-size: 64px;
+}
+
+.pricing-table .price-tag .after {
+  color: #3b3b3b;
+  font-weight: 500;
+}
+
+.pricing-table .price-button {
+  display: block;
+  color: #fff;
+  margin-top: 2rem;
+  padding: .75rem;
+  border-radius: 2px;
+  text-align: center;
+  font-weight: 500;
+  transition: .3s;
+}
+
+.pricing-table .price-button:hover {
+  text-decoration: none;
+}
+
+.purple .pricing-label {
+  background: #cad2ff;
+  color: #627afe;
+}
+
+.purple .price-tag {
+  color: #627afe;
+}
+
+.purple .price-button {
+  background: #627afe;
+}
+
+.purple .price-button:hover {
+  background: #546dfe;
+}
+
+.turquoise .pricing-label {
+  background: #b9edee;
+  color: #44cdd2;
+}
+
+.turquoise .price-tag {
+  color: #44cdd2;
+}
+
+.turquoise .price-button {
+  background: #44cdd2;
+}
+
+.turquoise .price-button:hover {
+  background: #2dbcc4;
+}
+
+.red .pricing-label {
+  background: #ffc4c4;
+  color: #ff5e5e;
+}
+
+.red .price-tag {
+  color: #ff5e5e;
+}
+
+.red .price-button {
+  background: #ff5e5e;
+}
+
+.red .price-button:hover {
+  background: #f23c3c;
+}
+</style>
+
+
+<style type="text/css">
+.img_container {
+    width: 70vw;
+    height: 80vh;
+    margin: 20px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.main-img {
+    width: 50%;
+    height: 100%;
+    background-image: url("static/img/idmage-abou.png");
+    background-repeat: no-repeat;
+}
+
+.stacked-div {
+    width: 50%;
+    height: 100%;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, .7);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.main-img:hover .overlay,
+.top-img:hover .overlay,
+.bottom-img:hover .overlay {
+    opacity: 1;
+}
+
+.top-img {
+    width: 100%;
+    height: 100%;
+    background-image: url("https://zupimages.net/up/20/29/f9cp.png");
+    background-repeat: no-repeat;
+
+
+}
+
+
+
+
+</style>
+<script type="text/javascript">
+  document.getElementsByTagName("h1")[0].style.fontSize = "5em";
+</script>
+<style type="text/css">
+  /* Team Member CSS 
+===========================*/
+
+h1.team-h1 {
+  margin: 0;
+  position: absolute;
+  top: -16px;
+  text-align: center;
+  left: 40%;
+  background-color: white;
+  padding: 0px 20px;
+  color: #222; 
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+.team-container {
+  max-width: 1000px;
+  margin: auto;
+  border-top: 1px #e9e9e9 solid;
+  border-bottom: 1px #e9e9e9 solid;
+  padding-top: 5em;
+  padding-bottom: 5em;
+  margin-top: 3em;
+  position: relative;
+}
+
+.team-member {
+  width: 16%;
+  float: left;
+  text-align: center;
+  margin-right: 5%;
+}
+
+.team-member:last-child {margin-right: 0;}
+
+
+.team-member span,
+.team-member h3 {
+  max-width: 200px;
+  font-family: sans-serif;
+  letter-spacing: -1px;
+}
+
+.team-member h3 {
+  color: #1CA3A3;
+}
+
+.email {
+  color: #EA2678;
+  
+}
+
+.team-member span {
+  display: block;
+ 
+}
+.team-photo {
+  border-radius: 50%;
+  text-align: left;
+  margin: auto;
+  max-width: 200px;
+  height: 150px;
+  transition: 0.1s transform ease-in-out;
+}
+
+
+.team-photo:hover {
+  transform: scale(0.9);
+  cursor: pointer;
+}
+
+
+/* code for phone layout */
+@media (max-width:850px){
+  .team-member {
+    width:25%;
+    display: block;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-bottom: 40px;
+    
+  }
+  
+}
+
+
+
+@media (max-width:650px){
+  .team-member {
+    float: none;
+    display: block;
+    margin: 50px auto;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .team-member h3,
+  .team-member span {
+    margin: 15px auto;
+    display: block;
+  }
+}
+
+
+/* ENDS Team Member CSS 
+===========================*/
+</style>
+
+              <div class="clear"></div>
+        </div>
+        <!-- // End Banner Section // -->
+         <div class="bgcolor"></div>
+        <!-- \\ Begin Container \\ -->
+        <div id="Container">
+            <!-- \\ Begin About Section \\ -->
+
+            <div class="About_sec" id="about">
+                <div class="Center">
+                    <h2>Question ou problème ? Réponse en 48h chrono !</h2>
+      <br><br>
+      <hr class="cd">
+            <div class="About_sec" id="about">
+                <div class="Center">
+                    <p style="font-size: 20px">Notre plateforme est encore jeune. Si vous rencontrez le moindre problème, ou si vous avez une question, contacter nous ici, et décrivez le problème. Votre signalement ou conseille nous aidera pour l'avenir.<br><a href="/contact">Page Contact</p></a>
+                    <div class="Line"></div>
+  </section>
+</div></div></section></div></div>
+  <!--==========================
+    Features Section
+  ============================-->
+  <!--==========================
+    Pricing Table Section
+  ============================-->
+    </section>
+
+  <!--==========================
+    Newsletter Section
+  ============================-->
+  <section id="newsletter" class="newsletter text-center wow fadeInUp">
+    <div class="overlay padd-section">
+      <div class="container">
+          <div  align="center"><a class="example_b" href="{{ url_for('inscription') }}" target="_blank" rel="nofollow noopener">S'inscrire</a>
+          <a  align="center"><a class="example_b" href="{{ url_for('co') }}" target="_blank" rel="nofollow noopener">Se connecter</a></div>
+          <ul class="list-unstyled">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          </ul>
+
+
+      </div>
+    </div>
+  </section>
+
+        </div>
+      </a></body>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-12 col-lg-4">
+          <div class="footer-logo">
+
+            <a class="navbar-brand" href="/">MOBILIT'chi</a>
+            <p>“Facilitons notre vie !” </p>
+          </div>
+
+        </div>
+
+
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <div class="list-menu">
+
+            <h4>À propos</h4>
+            <ul class="list-unstyled">
+              <li><a href='/condition' style="font-size: 15px">Conditions du site</a></li><br>
+              <li><a href='/contact' style="font-size: 15px">Nous contacter</a></li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyrights">
+      <div class="container">
+        <p>&copy; Copyrights MOBILIT'chi. Tout les droits réservé</p>
+        </div>
+  </footer>
+  <script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.min.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.scrollex.min.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='assets/js/skel.min.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='assets/js/util.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='assets/js/main.js')}}"></script>
+
+</html>
