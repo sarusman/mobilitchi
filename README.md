@@ -15,7 +15,7 @@ On this page, many options are available to you such as the recurrence, the send
 
 ## Mail template
 
-![Capture d’écran 2021-12-19 à 02 45 14](https://user-images.githubusercontent.com/60844500/146660694-23c95114-f727-450c-8a08-1792edd44f1d.png)
+![Capture d’écran 2021-12-19 à 12 15 32](https://user-images.githubusercontent.com/60844500/146672956-7d7e1a23-8293-4782-bd74-88c29df5361d.png)
 
 ## Dashboard
 
