@@ -9,7 +9,7 @@ Mobilitchi sends the transit times of the various RATP transports by email or SM
 On this page, many options are available to you such as the recurrence, the sending method (mail, sms ..) and see the stations served by a transport. This site uses many technologies, in particular Flask (python) and JS libraries.
 
 
-<center>![lt9w](https://user-images.githubusercontent.com/60844500/146673668-47c5e2ab-7dd2-4173-9fa7-1e9c089f8a9d.png)</center>
+![lt9w](https://user-images.githubusercontent.com/60844500/146673668-47c5e2ab-7dd2-4173-9fa7-1e9c089f8a9d.png)
 
 
 
